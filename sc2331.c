@@ -35,6 +35,8 @@
 #  include <nuttx/net/pkt.h>
 #endif
 
+#include "cmdevt.h"
+
 struct sc2331_s
 {
 	struct net_driver_s net_dev;
@@ -57,7 +59,7 @@ static int sc2331_txavail(struct net_driver_s *dev)
 	return 0;
 }
 
-static int sc2331_ioctl(struct net_driver_s *dev)
+static int sc2331_ioctl(struct net_driver_s *dev, int cmd, long arg)
 {
 	return 0;
 }
@@ -71,13 +73,15 @@ int sc2331_initialize(void)
 
 	/* Register data recv interface to SDIO */
 
+	sprdwl_cmd_init();
+
 	memset(sc2331, 0, sizeof(*sc2331));
 
 	memcpy(net_dev->d_ifname, "wlan0", 6);
 	net_dev->d_ifup = sc2331_ifup;
 	net_dev->d_ifdown = sc2331_ifdown;
 	net_dev->d_txavail = sc2331_txavail;
-	//net_dev->d_ioctl = sc2331_ioctl;
+	net_dev->d_ioctl = sc2331_ioctl;
 	net_dev->d_private = (void *)sc2331;
 
 	/* Set MAC address to net_dev*/
