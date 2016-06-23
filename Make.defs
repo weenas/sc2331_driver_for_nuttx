@@ -1,0 +1,9 @@
+ifeq ($(CONFIG_NET_SC2331),y)
+
+CSRCS += sc2331.c
+
+DEPPATH += --dep-path net$(DELIM)sc2331
+VPATH += :net$(DELIM)sc2331
+CFLAGS += ${shell $(INCDIR) $(INCDIROPT) "$(CC)" $(TOPDIR)$(DELIM)drivers$(DELIM)net$(DELIM)sc2331}
+
+endif
