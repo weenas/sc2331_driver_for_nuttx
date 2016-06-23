@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 Spreadtrum Communications Inc.
+ * Copyright (C) 2016 Spreadtrum Communications Inc.
  *
  * Authors:<eason@weenas.com>
  * Owner:
