@@ -1,6 +1,7 @@
 ifeq ($(CONFIG_NET_SC2331),y)
 
 CSRCS += sc2331.c
+CSRCS += cmdevt.c
 
 DEPPATH += --dep-path net$(DELIM)sc2331
 VPATH += :net$(DELIM)sc2331
