@@ -92,4 +92,14 @@ int wlan_cmd_scan(unsigned char vif_id, const unsigned char *ssid,
 	return 0;
 }
 
+unsigned short sprdwl_rx_rsp_process(struct sprdwl_priv *priv, unsigned char *msg)
+{
+	return 0;
+}
+
+unsigned short sprdwl_rx_event_process(struct sprdwl_priv *priv, unsigned char *msg)
+{
+	return 0;
+}
+
 
