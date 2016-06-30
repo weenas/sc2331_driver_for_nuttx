@@ -44,8 +44,8 @@ int wlan_cmd_mac_open(unsigned char vif_id, unsigned char mode,
 		      unsigned char *mac_addr)
 {
 	int ret;
-	struct wlan_cmd_mac_open *open = (void*)cmd.buf_send;
-	
+	struct wlan_cmd_mac_open *open = (void *)cmd.buf_send;
+
 	open->mode = mode;
 	if (NULL != mac_addr)
 		memcpy((unsigned char *)(&(open->mac[0])), mac_addr, 6);
@@ -59,7 +59,7 @@ int wlan_cmd_mac_open(unsigned char vif_id, unsigned char mode,
 
 int wlan_cmd_mac_close(unsigned char vif_id, unsigned char mode)
 {
-	struct wlan_cmd_mac_close *close = (void*)cmd.buf_send;
+	struct wlan_cmd_mac_close *close = (void *)cmd.buf_send;
 
 	close->mode = mode;
 	wlan_cmd_send_recv(vif_id, (unsigned char *)(close),
@@ -92,14 +92,14 @@ int wlan_cmd_scan(unsigned char vif_id, const unsigned char *ssid,
 	return 0;
 }
 
-unsigned short sprdwl_rx_rsp_process(struct sprdwl_priv *priv, unsigned char *msg)
+unsigned short sprdwl_rx_rsp_process(struct sprdwl_priv *priv,
+				     unsigned char *msg)
 {
 	return 0;
 }
 
-unsigned short sprdwl_rx_event_process(struct sprdwl_priv *priv, unsigned char *msg)
+unsigned short sprdwl_rx_event_process(struct sprdwl_priv *priv,
+				       unsigned char *msg)
 {
 	return 0;
 }
-
-

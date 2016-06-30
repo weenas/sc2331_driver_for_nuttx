@@ -58,7 +58,7 @@ struct sprdwl_sdio {
 	 * and change txrx intf pass priv to void later
 	 */
 	struct sprdwl_priv *priv;
-	/* if nedd more flags which not only exit, fix it*/
+	/* if nedd more flags which not only exit, fix it */
 	/* unsigned int exit:1; */
 	int exit;
 
@@ -140,7 +140,7 @@ enum sprdwl_mode {
 	SPRDWL_MODE_NONE,
 	SPRDWL_MODE_STATION,
 	SPRDWL_MODE_AP,
-	
+
 	SPRDWL_MODE_P2P_DEVICE = 4,
 	SPRDWL_MODE_P2P_CLIENT,
 	SPRDWL_MODE_P2P_GO,

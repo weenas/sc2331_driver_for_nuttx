@@ -23,13 +23,15 @@ struct sprdwl_priv;
 //struct sprdwl_msg_buf;
 
 //int sprdwl_send_data(struct sprdwl_vif *vif,
-//		     struct sprdwl_msg_buf *msg,
-//		     struct sk_buff *skb, u8 type, u8 offset);
+//                   struct sprdwl_msg_buf *msg,
+//                   struct sk_buff *skb, u8 type, u8 offset);
 //int sprdwl_send_cmd(struct sprdwl_priv *priv, struct sprdwl_msg_buf *msg);
 
 unsigned short sprdwl_rx_data_process(struct sprdwl_priv *priv,
 				      unsigned char *msg);
-unsigned short sprdwl_rx_event_process(struct sprdwl_priv *priv, unsigned char *msg);
-unsigned short sprdwl_rx_rsp_process(struct sprdwl_priv *priv, unsigned char *msg);
+unsigned short sprdwl_rx_event_process(struct sprdwl_priv *priv,
+				       unsigned char *msg);
+unsigned short sprdwl_rx_rsp_process(struct sprdwl_priv *priv,
+				     unsigned char *msg);
 
 #endif

@@ -34,7 +34,7 @@
 #include <nuttx/net/netdev.h>
 
 #ifdef CONFIG_NET_PKT
-#  include <nuttx/net/pkt.h>
+#include <nuttx/net/pkt.h>
 #endif
 #include "intf.h"
 
