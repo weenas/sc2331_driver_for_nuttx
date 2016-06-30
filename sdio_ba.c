@@ -87,11 +87,11 @@ static int sprdwl_hw_init(struct hw_info *hw)
 {
 	memset(hw, 0, sizeof(struct hw_info));
 
-	hw->sdio_tx_chn.num          = 3;
-	hw->sdio_tx_chn.chn[0]       = 0;
-	hw->sdio_tx_chn.chn[1]       = 1;
-	hw->sdio_tx_chn.chn[2]       = 2;
-	hw->sdio_tx_chn.bit_map      = 0x0007;
+	hw->sdio_tx_chn.num = 3;
+	hw->sdio_tx_chn.chn[0] = 0;
+	hw->sdio_tx_chn.chn[1] = 1;
+	hw->sdio_tx_chn.chn[2] = 2;
+	hw->sdio_tx_chn.bit_map = 0x0007;
 	hw->sdio_tx_chn.timeout_time = 600;
 	hw->sdio_tx_chn.timeout_flag = 0;
 
@@ -113,7 +113,7 @@ static int sprdwl_hw_init(struct hw_info *hw)
 
 void sprdwl_rx_chn_isr(int chn)
 {
-	
+
 }
 
 static int check_valid_chn(int flag, unsigned short status,
@@ -202,7 +202,7 @@ static int sprdwl_sdio_is_exit(void)
 }
 
 static struct sprdwl_if_ops sprdwl_sdio_ops = {
-//	.tx = sprdwl_sdio_txmsg,
+//      .tx = sprdwl_sdio_txmsg,
 	.force_exit = sprdwl_sdio_force_exit,
 	.is_exit = sprdwl_sdio_is_exit,
 };
@@ -222,4 +222,3 @@ int sprdwl_intf_init(struct sprdwl_priv *priv)
 
 	return ret;
 }
-

@@ -24,17 +24,17 @@
 struct sprdwl_priv;
 
 struct sprdwl_if_ops {
-//	struct sprdwl_msg_buf *(*get_msg_buf)(void *sdev,
-//					      enum sprdwl_head_type type,
-//					      enum sprdwl_mode mode);
-//	void (*free_msg_buf)(void *sdev, struct sprdwl_msg_buf *msg);
-//	int (*tx)(void *spdev, struct sprdwl_msg_buf *msg);
-	int (*tx)(void *data, int len);
-	void (*force_exit)(void);
-	int (*is_exit)(void);
-	int (*suspend)(struct sprdwl_priv *priv);
-	int (*resume)(struct sprdwl_priv *priv);
-//	void (*debugfs)(struct dentry *dir);
+//      struct sprdwl_msg_buf *(*get_msg_buf)(void *sdev,
+//                                            enum sprdwl_head_type type,
+//                                            enum sprdwl_mode mode);
+//      void (*free_msg_buf)(void *sdev, struct sprdwl_msg_buf *msg);
+//      int (*tx)(void *spdev, struct sprdwl_msg_buf *msg);
+	int (*tx) (void *data, int len);
+	void (*force_exit) (void);
+	int (*is_exit) (void);
+	int (*suspend) (struct sprdwl_priv * priv);
+	int (*resume) (struct sprdwl_priv * priv);
+//      void (*debugfs)(struct dentry *dir);
 };
 
 extern int sprdwl_intf_init(struct sprdwl_priv *priv);

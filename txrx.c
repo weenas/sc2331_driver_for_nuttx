@@ -16,7 +16,6 @@
  * GNU General Public License for more details.
  */
 
-
 #include "sc2331.h"
 #include "txrx.h"
 #include "sdio_ba.h"
@@ -128,7 +127,7 @@ static int sprdwl_rx_wapi_data_process(struct sprdwl_vif *vif,
 	struct ieee80211_hdr_3addr *addr;
 	struct sk_buff *skb;
 	struct net_device *ndev;
-	u8 snap_header[6] = {0xaa, 0xaa, 0x03, 0x00, 0x00, 0x00};
+	u8 snap_header[6] = { 0xaa, 0xaa, 0x03, 0x00, 0x00, 0x00 };
 
 	ndev = vif->ndev;
 	addr = (struct ieee80211_hdr_3addr *)pdata;

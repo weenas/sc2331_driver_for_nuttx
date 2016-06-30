@@ -60,11 +60,10 @@ int sc2331_initialize(void)
 	net_dev->d_ioctl = sc2331_ioctl;
 	net_dev->d_private = (void *)priv;
 
-	/* Set MAC address to net_dev*/
+	/* Set MAC address to net_dev */
 	/* net_dev->d_mac */
 
 	(void)netdev_register(net_dev, NET_LL_ETHERNET);
 
 	return 0;
 }
-

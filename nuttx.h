@@ -34,7 +34,8 @@ static inline int sdio_chn_status(unsigned short chn, unsigned short *status)
 	return 0;
 }
 
-static inline int sdio_dev_write(unsigned int chn, void *data_buf, unsigned int count)
+static inline int sdio_dev_write(unsigned int chn, void *data_buf,
+				 unsigned int count)
 {
 	return 0;
 }
@@ -44,12 +45,14 @@ static inline void invalid_recv_flush(unsigned int chn)
 	return;
 }
 
-static inline int sdiodev_readchn_init(int chn, void *callback, unsigned char with_para)
+static inline int sdiodev_readchn_init(int chn, void *callback,
+				       unsigned char with_para)
 {
 	return 0;
 }
 
-static inline int sdio_dev_read(unsigned int chn, void *read_buf, unsigned int *count)
+static inline int sdio_dev_read(unsigned int chn, void *read_buf,
+				unsigned int *count)
 {
 	return 0;
 }
@@ -65,4 +68,3 @@ void mdbg_loopcheck_read(void);
 void mdbg_sdio_read(void);
 
 #endif
-

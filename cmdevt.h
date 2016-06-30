@@ -22,8 +22,8 @@
 #define BUF_RECV_SIZE (512)
 
 struct sprdwl_cmd_info {
-	unsigned char	buf_send[BUF_SEND_SIZE];
-	unsigned char	buf_recv[BUF_RECV_SIZE];
+	unsigned char buf_send[BUF_SEND_SIZE];
+	unsigned char buf_recv[BUF_RECV_SIZE];
 };
 
 enum ITM_HOST_TROUT3_CMD_TYPE {
@@ -212,4 +212,3 @@ int wlan_cmd_mac_close(unsigned char vif_id, unsigned char mode);
 int wlan_cmd_scan(unsigned char vif_id, const unsigned char *ssid,
 		  const unsigned char *channels, int len);
 #endif
-
